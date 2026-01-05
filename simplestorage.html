@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Storage | Smart Contract</title>
+    
+  <script src="https://kit.fontawesome.com/8e34b61e55.js" crossorigin="anonymous"></script>
+    
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#connect">Connect Wallet</a></li>
+            <li><a href="#create_contract">Create Contract</a></li>
+            <li><a href="#store">Store Value</a></li>
+            <li><a href="#display">Display Value</a></li>
+
+          </ul>
+
+          <!-- <i class="fa-solid fa-list" id="crossMenu" onclick="openmenu()"></i> -->
+        </nav>
+        <div class="header-text">
+          <h1>
+            <span style="color: #ff004f">Simple Storage </span> Smart Contract
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!---------------Connect------------>
+
+    <div class="connect" id="connect">
+      <div class="container">
+        <div class="discription">
+          <p>
+            <span><i class="fa-solid fa-triangle-exclamation"></i></span>Before
+            creating new contract you must make sure that the website is
+            connected to MetaMask, by clicking on the 'Connect' button.
+          </p>
+        </div>
+        <button class="connect_button">Connect</button>
+      </div>
+    </div>
+    <!---------------------step1---------------------->
+    <div class="step1" id="create_contract">
+      <div class="container">
+        <h2 id="step1">Step1:</h2>
+        <button class="createContractButton">Create a new Contract</button>
+      </div>
+    </div>
+
+    <!------------------step2--------------->
+    <div id="store">
+      <div class="container">
+        <h2 id="step2">Step2:</h2>
+        <form>
+            <button id="storeButton"><label for="storing">Store a value</label></button>
+            <input type="number" id="value">
+        </form>
+      </div>
+    </div>
+<!--------------------step3----------------------->
+
+    <div id="display">
+        <div class="container">
+            <h3 id="step3">Step3:</h3>
+            <div class="displayArea">
+                <button id="displayButtton">
+                    Display the value 
+                </button>
+                <div class="result"></div>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
