@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/8e34b61e55.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="header">
       <div class="container">
         <nav>
           <img src="images/logo.png" class="logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Services">Contracts</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-regular fa-circle-xmark" id="crossMenu" onclick="closemenu()"></i>
           </ul>
+
+          <i class="fa-solid fa-list" id="crossMenu" onclick="openmenu()" ></i>
         </nav>
         <div class="header-text">
           <p>Blockchain Engineer</p>
@@ -35,10 +39,10 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="images/user.png" />
+            <img src="images/user.webp" />
           </div>
           <div class="about-col-2">
-            <h1>About ME</h1>
+            <h1 class="sub-title">About ME</h1>
             <p>
               Hi everyone, I am Krish Grover from Punjab. My branch is
               mechanical engineering. My hobbies include bodybuilding , gaming
@@ -87,6 +91,66 @@
       </div>
     </div>
 
+    <!----------------------Services------------->
+
+    <div id="Services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="Services-list">
+          <div>
+            <i class="fa-brands fa-cash-app"></i>
+            <h2>DApps</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing 
+              elit. Voluptate maiores recusandae nam laudantium sit 
+              laboriosam soluta repellat voluptatem dolorum, esse ab
+               nostrum quaerat.</p>
+              <a href="#">See Contract</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!----------------------Portfolio----------------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">
+      My Work
+    </h1>
+    <div class="worklist">
+      <div class="work">
+        <img src="images/work-1.png">
+        <div class="layer">
+          <h3>Simple Storage</h3>
+          <p>In this contract you can store and display a desired number on a <span style="color: #ff004f;"> Smart contract </span> using <span style="color: #ff004f;"> Sepolia Etherium </span> </p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-----------Contact--------------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p> <a href="mailto:krish_g@me.iitr.ac.in"><i class="fa-regular fa-message"></i></a> krish_g@me.iitr.ac.in</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/krishgrover23_?igsh=MWRxMmFpY2dlMzZucA==" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/gkrish088-blip" class="git-hub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/krish-grover-97ba91369/" class="linkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2026 Krish Grover | Built with passion </p>
+    </div>
+  </div>
+</div>
+
     <script>
       let tabLinks = document.querySelectorAll(".tab-links");
       let tabContents = document.querySelectorAll(".tab-contents");
@@ -100,6 +164,17 @@
         event.currentTarget.classList.add("active-links")
         document.getElementById(tabname).classList.add('active-tabs')
       }
+    </script>
+    <script>
+
+      let sidemenu = document.querySelector('#sidemenu')
+      function openmenu(){
+        sidemenu.style.right = '0';
+      }
+      function closemenu(){
+        sidemenu.style.right = '-200px';
+      }
+
     </script>
   </body>
 </html>
