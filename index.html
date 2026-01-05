@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="header"></div>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Blockchain Engineer</p>
+          <h1>
+            Hi, I'm <span>Krish Grover</span> <br />
+            from Punjab
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------about---------------------- -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1>About ME</h1>
+            <p>
+              Hi everyone, I am Krish Grover from Punjab. My branch is
+              mechanical engineering. My hobbies include bodybuilding , gaming
+              and travelling.
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Eduction</p>
+            </div>
+            <div class="tab-contents active-tabs" id="skills">
+                <ul>
+                    <li><span>Web3</span><br>Developing Web3 websites/applications</li>
+                    <li><span>WEb Development</span><br>Web app Development</li>
+                    <li><span>Solidity</span><br>Makiing Smart Contracts </li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2025</span><br>Developed a website in Syntax Error Hackathon</li>
+                    <li><span>Current</span><br>Working on a project in Forge Build cohort</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2024</span><br>Mukat Public School</li>
+                    <li><span>2029</span><br>IIT Roorkee - Mechanincal Engineering</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        let tabLinks = document.querySelector('.tab-links');
+        let tabContents = document.querySelector('.tab-contents');
+        function opentab(tabname){
+            for(tablink of tabLinks){
+                tablink.classList.remove("active-link")
+            }
+        }
+        
+
+    </script>
+  </body>
 </html>
