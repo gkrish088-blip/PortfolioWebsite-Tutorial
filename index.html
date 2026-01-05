@@ -45,28 +45,42 @@
               and travelling.
             </p>
             <div class="tab-titles">
-                <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                <p class="tab-links" onclick="opentab('education')">Eduction</p>
+              <p class="tab-links active-links" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Eduction</p>
             </div>
             <div class="tab-contents active-tabs" id="skills">
-                <ul>
-                    <li><span>Web3</span><br>Developing Web3 websites/applications</li>
-                    <li><span>WEb Development</span><br>Web app Development</li>
-                    <li><span>Solidity</span><br>Makiing Smart Contracts </li>
-                </ul>
+              <ul>
+                <li>
+                  <span>Web3</span><br />Developing Web3 websites/applications
+                </li>
+                <li><span>WEb Development</span><br />Web app Development</li>
+                <li><span>Solidity</span><br />Makiing Smart Contracts</li>
+              </ul>
             </div>
             <div class="tab-contents" id="experience">
-                <ul>
-                    <li><span>2025</span><br>Developed a website in Syntax Error Hackathon</li>
-                    <li><span>Current</span><br>Working on a project in Forge Build cohort</li>
-                </ul>
+              <ul>
+                <li>
+                  <span>2025</span><br />Developed a website in Syntax Error
+                  Hackathon
+                </li>
+                <li>
+                  <span>Current</span><br />Working on a project in Forge Build
+                  cohort
+                </li>
+              </ul>
             </div>
             <div class="tab-contents" id="education">
-                <ul>
-                    <li><span>2024</span><br>Mukat Public School</li>
-                    <li><span>2029</span><br>IIT Roorkee - Mechanincal Engineering</li>
-                </ul>
+              <ul>
+                <li><span>2024</span><br />Mukat Public School</li>
+                <li>
+                  <span>2029</span><br />IIT Roorkee - Mechanincal Engineering
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -74,15 +88,18 @@
     </div>
 
     <script>
-        let tabLinks = document.querySelector('.tab-links');
-        let tabContents = document.querySelector('.tab-contents');
-        function opentab(tabname){
-            for(tablink of tabLinks){
-                tablink.classList.remove("active-link")
-            }
+      let tabLinks = document.querySelectorAll(".tab-links");
+      let tabContents = document.querySelectorAll(".tab-contents");
+      function opentab(tabname) {
+        for (tablink of tabLinks) {
+          tablink.classList.remove("active-links");
         }
-        
-
+        for (tabcontent of tabContents) {
+          tabcontent.classList.remove("active-tabs");
+        }
+        event.currentTarget.classList.add("active-links")
+        document.getElementById(tabname).classList.add('active-tabs')
+      }
     </script>
   </body>
 </html>
